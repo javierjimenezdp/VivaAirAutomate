@@ -123,9 +123,9 @@ public class VivaPageObject extends VivaWebBasePage{
     private WebElement clicBank;
     @FindBy(id = "address")
     private WebElement setAddres;
-    @FindBy(xpath = "(//div[@class=\"terms-conditions-policies\"])")
+    @FindBy(xpath = "//p[contains(text(),\"Acepto el Contrato de Transporte de \")]")
     private WebElement checkBox6;
-    @FindBy(xpath = "(//div[@class=\"terms-conditions-policies\"])[2]")
+    @FindBy(xpath = "//p[contains(text(),\"Autorizo el tratamiento de los datos personales conforme la política de privacidad de \")]")
     private WebElement checkBox7;
     @FindBy(id = "booking-continue-btn")
     private WebElement continueClic5;
@@ -358,10 +358,14 @@ public class VivaPageObject extends VivaWebBasePage{
     } //set_infoPay
 
     public void clicCheckBox4() {
+        scrollElement(checkBox6);
+        esperaElemnento(checkBox6, 10);
         checkBox6.click();
     } //set_infoPay
 
     public void clickCheckBox5() {
+        scrollElement(checkBox7);
+        esperaElemnento(checkBox7, 10);
         checkBox7.click();
     } //set_infoPay
 
@@ -372,6 +376,7 @@ public class VivaPageObject extends VivaWebBasePage{
     } //set_infoPay
 
     public boolean verificationWayPay() {
+        threadTest(20);
         return verificationNequi.isDisplayed();
     } //verification_bank
 
