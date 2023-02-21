@@ -3,6 +3,12 @@ package Steps;
 import PageObject.VivaPageObject;
 import StepDefinitions.Hooks;
 
+import javax.security.auth.login.Configuration;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
 public class VivaSteps {
     VivaPageObject vivaPageObject;
     public VivaSteps() {
@@ -10,7 +16,10 @@ public class VivaSteps {
         vivaPageObject.setDriver(Hooks.getDriver());
     }
 
-    public void verification_page() {
+    public void verification_page() throws IOException {
+        Properties configuration = new Properties();
+        configuration.load(  new FileInputStream("Configuration.properties"));
+        Hooks.getDriver().get(configuration.getProperty("url"));
         if(vivaPageObject.isPresentAdd()){
             vivaPageObject.verificationPage();
         }

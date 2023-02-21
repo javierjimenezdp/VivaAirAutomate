@@ -9,6 +9,9 @@ import cucumber.api.java.en.When;
 import cucumber.api.java.en_scouse.An;
 import org.yecht.Data;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 public class VivaStepsDefinitions {
     VivaSteps vivaSteps;
     public VivaStepsDefinitions() {
@@ -16,7 +19,7 @@ public class VivaStepsDefinitions {
     }
 
     @Given("^Como usuario pasajero deseo hacer la búsquedad de un tiquete aereo$")
-    public void verificationFlyPage(){
+    public void verificationFlyPage() throws IOException {
         vivaSteps.verification_page();
     }
     @And("^debo verificar que sea un vuelo de ida y vuelta$")

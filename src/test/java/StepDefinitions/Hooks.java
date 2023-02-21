@@ -16,8 +16,8 @@ public class Hooks {
         options.addArguments("disable-infobars");
         options.addArguments("disable-notifications");
         options.addArguments("incognito");
+        options.addArguments("--disable-blink-features=AutomationControlled");
         driver=new ChromeDriver(options);
-        driver.get("https://www.vivaair.com/co/es");
     }
     @After
     public void finis(){driver.quit();
