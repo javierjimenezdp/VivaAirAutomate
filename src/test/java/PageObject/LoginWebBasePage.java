@@ -39,5 +39,12 @@ public class LoginWebBasePage extends PageObject {
     public void scrollElement(WebElement element){
         ((JavascriptExecutor) Hooks.getDriver()).executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", element);
     }
+    public boolean isVisibleElement(WebElement element) {
+        try {
+            return element.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
 }
 

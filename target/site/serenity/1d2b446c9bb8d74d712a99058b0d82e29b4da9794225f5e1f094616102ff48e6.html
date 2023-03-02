@@ -144,7 +144,7 @@
             <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 21-02-2023 18:26</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 24-02-2023 11:31</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -187,9 +187,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></a></span>
                             <span class="test-case-title">
-                                <span class="error-color">
+                                <span class="failing-color">
                                     Login exitoso en VivaAir
                                         <span class="related-issue-title"></span>
                                 </span>
@@ -210,7 +210,7 @@
         <div class="story-title">
             <h3 class="story-header">Scenario Outline</h3>
 
-            <div class="scenario">Given como usuario frecuente de viva cree un nuevo user<br>And me dirijo al módulo "registrarse ahora"<br>And cuando cargue el formulario dinamico debere enviar un código de validación a mi email<br>And abro una nueva pestaña, busco mi email, espero que cargue la página, accedo al email de verificación, copio el código y me dirijo nuevamente a la página de registro de Viva<br>And ingreso &lt;password&gt;, &lt;password2&gt;, &lt;nonbre&gt;, &lt;apellido&gt;, &lt;documento&gt;, &lt;genero&gt;, &lt;AAAA-MM-DD&gt;, &lt;celular&gt;, &lt;pais&gt;, &lt;estado&gt;, &lt;ciudad&gt;, &lt;direccion&gt;<br>And verifico que los terminos y condicione esten check, de lo contrario, marco la casilla<br>When le doy clic a "crear" debo esperar mientras de procesa la informacion<br>Then me redirecciona al profile del user en Viva</div>
+            <div class="scenario">Given como usuario frecuente de viva cree un nuevo user<br>And me dirijo al módulo 'iniciar sesion'<br>And valido que cargue el home de inicio de sesion<br>When registro mi &lt;email&gt; &lt;password&gt; y le doy al boton de iniciar sesion<br>Then carga el profile con información personal, de contacto, historial, etc.</div>
 
         </div>
 
@@ -228,58 +228,27 @@
                     <thead>
                     <tr>
                         <th>#</th>
+                            <th>Email</th>
                             <th>Password</th>
-                            <th>Password2</th>
-                            <th>Nonbre</th>
-                            <th>Apellido</th>
-                            <th>Documento</th>
-                            <th>Genero</th>
-                            <th>AAAA-MM-DD</th>
-                            <th>Celular</th>
-                            <th>Pais</th>
-                            <th>Estado</th>
-                            <th>Ciudad</th>
-                            <th>Direccion</th>
                     </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="test-ERROR"><a href="#0">1</a></td>
-                                <td class="test-ERROR"><a
+                            <td class="test-SUCCESS"><a href="#0">1</a></td>
+                                <td class="test-SUCCESS"><a
+                                            href="#0">jjimenezp@pibox.app</a>
+                                </td>
+                                <td class="test-SUCCESS"><a
                                             href="#0">Testing123456.</a>
                                 </td>
-                                <td class="test-ERROR"><a
-                                            href="#0">Testing123456.</a>
+                        </tr>
+                        <tr>
+                            <td class="test-FAILURE"><a href="#1">2</a></td>
+                                <td class="test-FAILURE"><a
+                                            href="#1">javierjimenezdp10@gmail.com</a>
                                 </td>
-                                <td class="test-ERROR"><a
-                                            href="#0">Javier</a>
-                                </td>
-                                <td class="test-ERROR"><a
-                                            href="#0">David</a>
-                                </td>
-                                <td class="test-ERROR"><a
-                                            href="#0">1093785891</a>
-                                </td>
-                                <td class="test-ERROR"><a
-                                            href="#0">M</a>
-                                </td>
-                                <td class="test-ERROR"><a
-                                            href="#0">1998/03/11</a>
-                                </td>
-                                <td class="test-ERROR"><a
-                                            href="#0">3165784528</a>
-                                </td>
-                                <td class="test-ERROR"><a
-                                            href="#0">Colombia</a>
-                                </td>
-                                <td class="test-ERROR"><a
-                                            href="#0">Antioquia</a>
-                                </td>
-                                <td class="test-ERROR"><a
-                                            href="#0">Medellin</a>
-                                </td>
-                                <td class="test-ERROR"><a
-                                            href="#0">Calle 49BB#82-31</a>
+                                <td class="test-FAILURE"><a
+                                            href="#1">123456</a>
                                 </td>
                         </tr>
                     </tbody>
@@ -304,13 +273,13 @@
                     <td colspan="5"></td>
                 </tr>
 
-                    <tr class="test-SKIPPED">
+                    <tr class="test-SUCCESS">
 
                         <td width="50" class="step-icon">
                             <a name="0"></a>
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
                                    style="display:block">
-                                    <i class="fa fa-plus-square-o imgstepSection0 skipped-icon"
+                                    <i class="fa fa-plus-square-o imgstepSection0 success-icon"
                                        style="margin-left: 20px; float:left; padding-right:5px"></i>
                                 </a>
                         </td>
@@ -320,7 +289,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
                                    style="display:block;">
                                     <span class="top-level-step">
-                                                Example: {password=Testing123456., password2=Testing123456., nonbre=Javier, apellido=David, documento=1093785891, genero=M, AAAA-MM-DD=1998/03/11, celular=3165784528, pais=Colombia, estado=Antioquia, ciudad=Medellin, direccion=Calle 49BB#82-31}
+                                                Example: {email=jjimenezp@pibox.app, password=Testing123456.}
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -328,24 +297,24 @@
                             </div>
                         </td>
 
-                            <td width="160" class="SKIPPED-text">
+                            <td width="160" class="SUCCESS-text">
                                     <a href="1d2b446c9bb8d74d712a99058b0d82e29b4da9794225f5e1f094616102ff48e6_screenshots.html#screenshots?screenshot=0">
-                                        <img src="6dfa9de19b4f7f98c80ae57a0619aa9322c052352b4448cddf00fac3ff59af45.png"
-                                             href="6dfa9de19b4f7f98c80ae57a0619aa9322c052352b4448cddf00fac3ff59af45.png"
+                                        <img src="fcded97288ac5a898964d1a393ab8b19798994180960e7cf7ac6098b0a57f21d.png"
+                                             href="fcded97288ac5a898964d1a393ab8b19798994180960e7cf7ac6098b0a57f21d.png"
                                              class="screenshot"
                                              width="48" height="48"/>
                                     </a>
                                     <i class="fas fa-arrow-right"></i>
 
-                                    <a href="1d2b446c9bb8d74d712a99058b0d82e29b4da9794225f5e1f094616102ff48e6_screenshots.html#screenshots?screenshot=5">
-                                        <img src="137cb2adfaf8053fa9f9e4da02f7131c012382850003df5bc44122149eed2d8e.png"
-                                             href="137cb2adfaf8053fa9f9e4da02f7131c012382850003df5bc44122149eed2d8e.png"
+                                    <a href="1d2b446c9bb8d74d712a99058b0d82e29b4da9794225f5e1f094616102ff48e6_screenshots.html#screenshots?screenshot=9">
+                                        <img src="411865cdcfd83f3cbeffd90509f67d54d3c54ac6e665f2b9134857e8d5c00074.png"
+                                             href="411865cdcfd83f3cbeffd90509f67d54d3c54ac6e665f2b9134857e8d5c00074.png"
                                              class="screenshot"
                                              width="48" height="48"/>
                                     </a>
                             </td>
-                        <td width="130"><span class="top-level-step">SKIPPED</span></td>
-                        <td width="100"><span class="top-level-step">87.08s</span></td>
+                        <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                        <td width="100"><span class="top-level-step">26.14s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -373,14 +342,14 @@
                             <td width="160" class="SUCCESS-text">
 
                                     <a href="1d2b446c9bb8d74d712a99058b0d82e29b4da9794225f5e1f094616102ff48e6_screenshots.html#screenshots?screenshot=1">
-                                        <img src="6dfa9de19b4f7f98c80ae57a0619aa9322c052352b4448cddf00fac3ff59af45.png"
-                                             href="6dfa9de19b4f7f98c80ae57a0619aa9322c052352b4448cddf00fac3ff59af45.png"
+                                        <img src="fcded97288ac5a898964d1a393ab8b19798994180960e7cf7ac6098b0a57f21d.png"
+                                             href="fcded97288ac5a898964d1a393ab8b19798994180960e7cf7ac6098b0a57f21d.png"
                                              class="screenshot"
                                              width="48" height="48"/>
                                     </a>
                             </td>
                         <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-group-step">11.84s</span></td>
+                        <td width="100"><span class="nested-group-step">12.04s</span></td>
                     </tr>
                     <tr class="test-SUCCESS">
 
@@ -394,7 +363,7 @@
                         <td class="step-description-column">
                             <div class="step-description">
                                     <span class="nested-group-step">
-                                                And me dirijo al módulo "registrarse ahora"
+                                                And me dirijo al módulo 'iniciar sesion'
                                         </span>
                                 <span class="evidence">
                                 </span>
@@ -403,62 +372,365 @@
 
                             <td width="160" class="SUCCESS-text">
                                     <a href="1d2b446c9bb8d74d712a99058b0d82e29b4da9794225f5e1f094616102ff48e6_screenshots.html#screenshots?screenshot=2">
-                                        <img src="6dfa9de19b4f7f98c80ae57a0619aa9322c052352b4448cddf00fac3ff59af45.png"
-                                             href="6dfa9de19b4f7f98c80ae57a0619aa9322c052352b4448cddf00fac3ff59af45.png"
+                                        <img src="fcded97288ac5a898964d1a393ab8b19798994180960e7cf7ac6098b0a57f21d.png"
+                                             href="fcded97288ac5a898964d1a393ab8b19798994180960e7cf7ac6098b0a57f21d.png"
                                              class="screenshot"
                                              width="48" height="48"/>
                                     </a>
                                     <i class="fas fa-arrow-right"></i>
 
                                     <a href="1d2b446c9bb8d74d712a99058b0d82e29b4da9794225f5e1f094616102ff48e6_screenshots.html#screenshots?screenshot=3">
-                                        <img src="ae64f95251b0174a4f20681c53a7b34beacd6218043d43195a98ed9f8ea5c24c.png"
-                                             href="ae64f95251b0174a4f20681c53a7b34beacd6218043d43195a98ed9f8ea5c24c.png"
+                                        <img src="9df119b615f0d03ad0970bddaa64ceca5c8ab22a0882e6a5709d48bf0cfdda24.png"
+                                             href="9df119b615f0d03ad0970bddaa64ceca5c8ab22a0882e6a5709d48bf0cfdda24.png"
                                              class="screenshot"
                                              width="48" height="48"/>
                                     </a>
                             </td>
                         <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-group-step">64.36s</span></td>
+                        <td width="100"><span class="nested-group-step">1.37s</span></td>
                     </tr>
-                    <tr class="test-ERROR">
+                    <tr class="test-SUCCESS">
 
                         <td width="70" class="step-icon">
                             <a name="0-2"></a>
                                 <span style="margin-left: 40px;"
-                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></a>
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
                                 </span>
                         </td>
 
                         <td class="step-description-column">
                             <div class="step-description">
                                     <span class="nested-group-step">
-                                                And cuando cargue el formulario dinamico debere enviar un código de validación a mi email
+                                                And valido que cargue el home de inicio de sesion
                                         </span>
                                 <span class="evidence">
                                 </span>
                             </div>
                         </td>
 
-                            <td width="160" class="ERROR-text">
+                            <td width="160" class="SUCCESS-text">
                                     <a href="1d2b446c9bb8d74d712a99058b0d82e29b4da9794225f5e1f094616102ff48e6_screenshots.html#screenshots?screenshot=4">
-                                        <img src="ae64f95251b0174a4f20681c53a7b34beacd6218043d43195a98ed9f8ea5c24c.png"
-                                             href="ae64f95251b0174a4f20681c53a7b34beacd6218043d43195a98ed9f8ea5c24c.png"
+                                        <img src="9df119b615f0d03ad0970bddaa64ceca5c8ab22a0882e6a5709d48bf0cfdda24.png"
+                                             href="9df119b615f0d03ad0970bddaa64ceca5c8ab22a0882e6a5709d48bf0cfdda24.png"
                                              class="screenshot"
                                              width="48" height="48"/>
                                     </a>
                                     <i class="fas fa-arrow-right"></i>
 
                                     <a href="1d2b446c9bb8d74d712a99058b0d82e29b4da9794225f5e1f094616102ff48e6_screenshots.html#screenshots?screenshot=5">
-                                        <img src="137cb2adfaf8053fa9f9e4da02f7131c012382850003df5bc44122149eed2d8e.png"
-                                             href="137cb2adfaf8053fa9f9e4da02f7131c012382850003df5bc44122149eed2d8e.png"
+                                        <img src="e59d5ce0acb6e22e35f8eb02e53173efa16786cdaa89cb76eaeff3cd04a49a44.png"
+                                             href="e59d5ce0acb6e22e35f8eb02e53173efa16786cdaa89cb76eaeff3cd04a49a44.png"
                                              class="screenshot"
                                              width="48" height="48"/>
                                     </a>
                             </td>
-                        <td width="130"><span class="nested-group-step">ERROR</span></td>
-                        <td width="100"><span class="nested-group-step">8.77s</span></td>
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">2.92s</span></td>
                     </tr>
-                        <tr class="test-ERROR">
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="0-3"></a>
+                                <span style="margin-left: 40px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                When registro mi jjimenezp@pibox.app Testing123456. y le doy al boton de iniciar sesion
+                                        </span>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                            <td width="160" class="SUCCESS-text">
+                                    <a href="1d2b446c9bb8d74d712a99058b0d82e29b4da9794225f5e1f094616102ff48e6_screenshots.html#screenshots?screenshot=6">
+                                        <img src="e59d5ce0acb6e22e35f8eb02e53173efa16786cdaa89cb76eaeff3cd04a49a44.png"
+                                             href="e59d5ce0acb6e22e35f8eb02e53173efa16786cdaa89cb76eaeff3cd04a49a44.png"
+                                             class="screenshot"
+                                             width="48" height="48"/>
+                                    </a>
+                                    <i class="fas fa-arrow-right"></i>
+
+                                    <a href="1d2b446c9bb8d74d712a99058b0d82e29b4da9794225f5e1f094616102ff48e6_screenshots.html#screenshots?screenshot=7">
+                                        <img src="eec85bb53e93e6e6eaa29f321cc866f2af2ee32d65b58cc46a5c128ad75a173f.png"
+                                             href="eec85bb53e93e6e6eaa29f321cc866f2af2ee32d65b58cc46a5c128ad75a173f.png"
+                                             class="screenshot"
+                                             width="48" height="48"/>
+                                    </a>
+                            </td>
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">6.4s</span></td>
+                    </tr>
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="0-4"></a>
+                                <span style="margin-left: 40px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                Then carga el profile con información personal, de contacto, historial, etc.
+                                        </span>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                            <td width="160" class="SUCCESS-text">
+                                    <a href="1d2b446c9bb8d74d712a99058b0d82e29b4da9794225f5e1f094616102ff48e6_screenshots.html#screenshots?screenshot=8">
+                                        <img src="eec85bb53e93e6e6eaa29f321cc866f2af2ee32d65b58cc46a5c128ad75a173f.png"
+                                             href="eec85bb53e93e6e6eaa29f321cc866f2af2ee32d65b58cc46a5c128ad75a173f.png"
+                                             class="screenshot"
+                                             width="48" height="48"/>
+                                    </a>
+                                    <i class="fas fa-arrow-right"></i>
+
+                                    <a href="1d2b446c9bb8d74d712a99058b0d82e29b4da9794225f5e1f094616102ff48e6_screenshots.html#screenshots?screenshot=9">
+                                        <img src="411865cdcfd83f3cbeffd90509f67d54d3c54ac6e665f2b9134857e8d5c00074.png"
+                                             href="411865cdcfd83f3cbeffd90509f67d54d3c54ac6e665f2b9134857e8d5c00074.png"
+                                             class="screenshot"
+                                             width="48" height="48"/>
+                                    </a>
+                            </td>
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">0.63s</span></td>
+                    </tr>
+
+                                </table>
+                            </td>
+                        </tr>
+                    <tr class="test-FAILURE">
+
+                        <td width="50" class="step-icon">
+                            <a name="1"></a>
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
+                                   style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection1 failure-icon"
+                                       style="margin-left: 20px; float:left; padding-right:5px"></i>
+                                </a>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
+                                   style="display:block;">
+                                    <span class="top-level-step">
+                                                Example: {email=javierjimenezdp10@gmail.com, password=123456}
+                                        </span>
+                                </a>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                            <td width="160" class="FAILURE-text">
+                                    <a href="1d2b446c9bb8d74d712a99058b0d82e29b4da9794225f5e1f094616102ff48e6_screenshots.html#screenshots?screenshot=10">
+                                        <img src="3c7e8f364522d72a8a0e4ff35b63907589dea7971d6c213f2f5311d0e8bfe3a9.png"
+                                             href="3c7e8f364522d72a8a0e4ff35b63907589dea7971d6c213f2f5311d0e8bfe3a9.png"
+                                             class="screenshot"
+                                             width="48" height="48"/>
+                                    </a>
+                                    <i class="fas fa-arrow-right"></i>
+
+                                    <a href="1d2b446c9bb8d74d712a99058b0d82e29b4da9794225f5e1f094616102ff48e6_screenshots.html#screenshots?screenshot=19">
+                                        <img src="baf833b1608bd72e4680d392922c666965942f7ae806303b8eee2214f6a43430.png"
+                                             href="baf833b1608bd72e4680d392922c666965942f7ae806303b8eee2214f6a43430.png"
+                                             class="screenshot"
+                                             width="48" height="48"/>
+                                    </a>
+                            </td>
+                        <td width="130"><span class="top-level-step">FAILURE</span></td>
+                        <td width="100"><span class="top-level-step">26.02s</span></td>
+                    </tr>
+                        <tr>
+                            <td colspan="5">
+                                <table id="stepSection1" class="step-table-nested" style="display:none;">
+
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="1-0"></a>
+                                <span style="margin-left: 40px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                Given como usuario frecuente de viva cree un nuevo user
+                                        </span>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                            <td width="160" class="SUCCESS-text">
+
+                                    <a href="1d2b446c9bb8d74d712a99058b0d82e29b4da9794225f5e1f094616102ff48e6_screenshots.html#screenshots?screenshot=11">
+                                        <img src="3c7e8f364522d72a8a0e4ff35b63907589dea7971d6c213f2f5311d0e8bfe3a9.png"
+                                             href="3c7e8f364522d72a8a0e4ff35b63907589dea7971d6c213f2f5311d0e8bfe3a9.png"
+                                             class="screenshot"
+                                             width="48" height="48"/>
+                                    </a>
+                            </td>
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">9.56s</span></td>
+                    </tr>
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="1-1"></a>
+                                <span style="margin-left: 40px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                And me dirijo al módulo 'iniciar sesion'
+                                        </span>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                            <td width="160" class="SUCCESS-text">
+                                    <a href="1d2b446c9bb8d74d712a99058b0d82e29b4da9794225f5e1f094616102ff48e6_screenshots.html#screenshots?screenshot=12">
+                                        <img src="3c7e8f364522d72a8a0e4ff35b63907589dea7971d6c213f2f5311d0e8bfe3a9.png"
+                                             href="3c7e8f364522d72a8a0e4ff35b63907589dea7971d6c213f2f5311d0e8bfe3a9.png"
+                                             class="screenshot"
+                                             width="48" height="48"/>
+                                    </a>
+                                    <i class="fas fa-arrow-right"></i>
+
+                                    <a href="1d2b446c9bb8d74d712a99058b0d82e29b4da9794225f5e1f094616102ff48e6_screenshots.html#screenshots?screenshot=13">
+                                        <img src="9df119b615f0d03ad0970bddaa64ceca5c8ab22a0882e6a5709d48bf0cfdda24.png"
+                                             href="9df119b615f0d03ad0970bddaa64ceca5c8ab22a0882e6a5709d48bf0cfdda24.png"
+                                             class="screenshot"
+                                             width="48" height="48"/>
+                                    </a>
+                            </td>
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">1.51s</span></td>
+                    </tr>
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="1-2"></a>
+                                <span style="margin-left: 40px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                And valido que cargue el home de inicio de sesion
+                                        </span>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                            <td width="160" class="SUCCESS-text">
+                                    <a href="1d2b446c9bb8d74d712a99058b0d82e29b4da9794225f5e1f094616102ff48e6_screenshots.html#screenshots?screenshot=14">
+                                        <img src="9df119b615f0d03ad0970bddaa64ceca5c8ab22a0882e6a5709d48bf0cfdda24.png"
+                                             href="9df119b615f0d03ad0970bddaa64ceca5c8ab22a0882e6a5709d48bf0cfdda24.png"
+                                             class="screenshot"
+                                             width="48" height="48"/>
+                                    </a>
+                                    <i class="fas fa-arrow-right"></i>
+
+                                    <a href="1d2b446c9bb8d74d712a99058b0d82e29b4da9794225f5e1f094616102ff48e6_screenshots.html#screenshots?screenshot=15">
+                                        <img src="e59d5ce0acb6e22e35f8eb02e53173efa16786cdaa89cb76eaeff3cd04a49a44.png"
+                                             href="e59d5ce0acb6e22e35f8eb02e53173efa16786cdaa89cb76eaeff3cd04a49a44.png"
+                                             class="screenshot"
+                                             width="48" height="48"/>
+                                    </a>
+                            </td>
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">2.78s</span></td>
+                    </tr>
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="1-3"></a>
+                                <span style="margin-left: 40px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                When registro mi javierjimenezdp10@gmail.com 123456 y le doy al boton de iniciar sesion
+                                        </span>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                            <td width="160" class="SUCCESS-text">
+                                    <a href="1d2b446c9bb8d74d712a99058b0d82e29b4da9794225f5e1f094616102ff48e6_screenshots.html#screenshots?screenshot=16">
+                                        <img src="e59d5ce0acb6e22e35f8eb02e53173efa16786cdaa89cb76eaeff3cd04a49a44.png"
+                                             href="e59d5ce0acb6e22e35f8eb02e53173efa16786cdaa89cb76eaeff3cd04a49a44.png"
+                                             class="screenshot"
+                                             width="48" height="48"/>
+                                    </a>
+                                    <i class="fas fa-arrow-right"></i>
+
+                                    <a href="1d2b446c9bb8d74d712a99058b0d82e29b4da9794225f5e1f094616102ff48e6_screenshots.html#screenshots?screenshot=17">
+                                        <img src="baf833b1608bd72e4680d392922c666965942f7ae806303b8eee2214f6a43430.png"
+                                             href="baf833b1608bd72e4680d392922c666965942f7ae806303b8eee2214f6a43430.png"
+                                             class="screenshot"
+                                             width="48" height="48"/>
+                                    </a>
+                            </td>
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">6.13s</span></td>
+                    </tr>
+                    <tr class="test-FAILURE">
+
+                        <td width="70" class="step-icon">
+                            <a name="1-4"></a>
+                                <span style="margin-left: 40px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                Then carga el profile con información personal, de contacto, historial, etc.
+                                        </span>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                            <td width="160" class="FAILURE-text">
+
+                                    <a href="1d2b446c9bb8d74d712a99058b0d82e29b4da9794225f5e1f094616102ff48e6_screenshots.html#screenshots?screenshot=19">
+                                        <img src="baf833b1608bd72e4680d392922c666965942f7ae806303b8eee2214f6a43430.png"
+                                             href="baf833b1608bd72e4680d392922c666965942f7ae806303b8eee2214f6a43430.png"
+                                             class="screenshot"
+                                             width="48" height="48"/>
+                                    </a>
+                            </td>
+                        <td width="130"><span class="nested-group-step">FAILURE</span></td>
+                        <td width="100"><span class="nested-group-step">4.49s</span></td>
+                    </tr>
+                        <tr class="test-FAILURE">
                             <td width="40">&nbsp</td>
                             <td width="%" colspan="4" class="error-message-cell">
 
@@ -467,10 +739,10 @@
         <div class="table">
             <div class="row">
                 <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
-                    <span class="error-message error-message-title">org.openqa.selenium.NoSuchElementException: Timed out after 2 seconds. Element not found<br>For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html<br>Build info: version: &#39;3.141.59&#39;, revision: &#39;e82be7d358&#39;, time: &#39;2018-11-14T08:17:03&#39;<br>System info: host: &#39;javier-VivoBook-ASUSLaptop-X509JB-X509JB&#39;, ip: &#39;127.0.1.1&#39;, os.name: &#39;Linux&#39;, os.arch: &#39;amd64&#39;, os.version: &#39;5.19.0-32-generic&#39;, java.version: &#39;1.8.0_352&#39;<br>Driver info: driver.version: unknown<br>For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html<br>Build info: version: &#39;3.141.59&#39;, revision: &#39;e82be7d358&#39;, time: &#39;2018-11-14T08:17:03&#39;<br>System info: host: &#39;javier-VivoBook-ASUSLaptop-X509JB-X509JB&#39;, ip: &#39;127.0.1.1&#39;, os.name: &#39;Linux&#39;, os.arch: &#39;amd64&#39;, os.version: &#39;5.19.0-32-generic&#39;, java.version: &#39;1.8.0_352&#39;<br>Driver info: driver.version: unknown</span>
+                    <span class="error-message error-message-title">java.lang.AssertionError: User no valido</span>
                 </div>
                 <div class="col-sm-2">
-                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-4""
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-12""
                        role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
                 </div>
              </div>
@@ -480,14 +752,14 @@
     <!-- Details Section -->
     <div class="row stacktrace-details">
       <div class="col">
-        <div class="collapse multi-collapse" id="stacktraceModal-4">
+        <div class="collapse multi-collapse" id="stacktraceModal-12">
             <div class="card">
                 <div class="card-header">
-                    <h4>org.openqa.selenium.NoSuchElementException </h4>
+                    <h4>java.lang.AssertionError </h4>
                 </div>
                 <div class="card-body">
                     <div>
-                        <pre>PageObject.LoginPageObject.isVisibleButtonGoogle(LoginPageObject.java:27)<br />Steps.LoginSteps.bottonLogginGoogle(LoginSteps.java:33)<br />StepDefinitions.LoginStepsDefinitions.logginGoogle(LoginStepsDefinitions.java:31)<br />✽.cuando cargue el formulario dinamico debere enviar un código de validación a mi email(src/test/resources/Feature/login.feature:6)<br /></pre>
+                        <pre>Steps.LoginSteps.validationProfileViva(LoginSteps.java:47)<br />StepDefinitions.LoginStepsDefinitions.validateProfile(LoginStepsDefinitions.java:39)<br />✽.carga el profile con información personal, de contacto, historial, etc.(src/test/resources/Feature/login.feature:8)<br /></pre>
                     </div>
 
                 </div>
@@ -496,139 +768,14 @@
     </div>
                             </td>
                         </tr>
-                    <tr class="test-SKIPPED">
-
-                        <td width="70" class="step-icon">
-                            <a name="0-3"></a>
-                                <span style="margin-left: 40px;"
-                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></a>
-                                </span>
-                        </td>
-
-                        <td class="step-description-column">
-                            <div class="step-description">
-                                    <span class="nested-group-step">
-                                                And abro una nueva pestaña, busco mi email, espero que cargue la página, accedo al email de verificación, copio el código y me dirijo nuevamente a la página de registro de Viva
-                                        </span>
-                                <span class="evidence">
-                                </span>
-                            </div>
-                        </td>
-
-                            <td width="160" class="SKIPPED-text">
-
-                            </td>
-                        <td width="130"><span class="nested-group-step">SKIPPED</span></td>
-                        <td width="100"><span class="nested-group-step">0.01s</span></td>
-                    </tr>
-                    <tr class="test-PENDING">
-
-                        <td width="70" class="step-icon">
-                            <a name="0-4"></a>
-                                <span style="margin-left: 40px;"
-                                      class="nested-group-icon"><a href='##beforetable'><i class='far fa-stop-circle pending-icon ' title='PENDING'></i></a>
-                                </span>
-                        </td>
-
-                        <td class="step-description-column">
-                            <div class="step-description">
-                                    <span class="nested-group-step">
-                                                And ingreso Testing123456., Testing123456., Javier, David, 1093785891, M, 1998/03/11, 3165784528, Colombia, Antioquia, Medellin, Calle 49BB#82-31
-                                        </span>
-                                <span class="evidence">
-                                </span>
-                            </div>
-                        </td>
-
-                            <td width="160" class="PENDING-text">
-
-                            </td>
-                        <td width="130"><span class="nested-group-step">PENDING</span></td>
-                        <td width="100"><span class="nested-group-step">0.01s</span></td>
-                    </tr>
-                    <tr class="test-SKIPPED">
-
-                        <td width="70" class="step-icon">
-                            <a name="0-5"></a>
-                                <span style="margin-left: 40px;"
-                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></a>
-                                </span>
-                        </td>
-
-                        <td class="step-description-column">
-                            <div class="step-description">
-                                    <span class="nested-group-step">
-                                                And verifico que los terminos y condicione esten check, de lo contrario, marco la casilla
-                                        </span>
-                                <span class="evidence">
-                                </span>
-                            </div>
-                        </td>
-
-                            <td width="160" class="SKIPPED-text">
-
-                            </td>
-                        <td width="130"><span class="nested-group-step">SKIPPED</span></td>
-                        <td width="100"><span class="nested-group-step">0.01s</span></td>
-                    </tr>
-                    <tr class="test-SKIPPED">
-
-                        <td width="70" class="step-icon">
-                            <a name="0-6"></a>
-                                <span style="margin-left: 40px;"
-                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></a>
-                                </span>
-                        </td>
-
-                        <td class="step-description-column">
-                            <div class="step-description">
-                                    <span class="nested-group-step">
-                                                When le doy clic a "crear" debo esperar mientras de procesa la informacion
-                                        </span>
-                                <span class="evidence">
-                                </span>
-                            </div>
-                        </td>
-
-                            <td width="160" class="SKIPPED-text">
-
-                            </td>
-                        <td width="130"><span class="nested-group-step">SKIPPED</span></td>
-                        <td width="100"><span class="nested-group-step">0.01s</span></td>
-                    </tr>
-                    <tr class="test-SKIPPED">
-
-                        <td width="70" class="step-icon">
-                            <a name="0-7"></a>
-                                <span style="margin-left: 40px;"
-                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></a>
-                                </span>
-                        </td>
-
-                        <td class="step-description-column">
-                            <div class="step-description">
-                                    <span class="nested-group-step">
-                                                Then me redirecciona al profile del user en Viva
-                                        </span>
-                                <span class="evidence">
-                                </span>
-                            </div>
-                        </td>
-
-                            <td width="160" class="SKIPPED-text">
-
-                            </td>
-                        <td width="130"><span class="nested-group-step">SKIPPED</span></td>
-                        <td width="100"><span class="nested-group-step">0.01s</span></td>
-                    </tr>
 
                                 </table>
                             </td>
                         </tr>
-                <tr class="test-ERROR">
+                <tr class="test-FAILURE">
                         <td colspan="3"></td>
-                    <td width="130"><span class="top-level-step"><em>ERROR</em></span></td>
-                    <td width="100"><span class="top-level-step"><em>87.71s</em></span></td>
+                    <td width="130"><span class="top-level-step"><em>FAILURE</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>53.09s</em></span></td>
                 </tr>
 
             </table>

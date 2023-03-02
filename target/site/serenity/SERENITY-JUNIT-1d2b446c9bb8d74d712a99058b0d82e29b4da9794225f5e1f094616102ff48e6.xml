@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Yo como usuario pasajero, deseo hacer una compra de un tiquete aereo" skipped="0" tests="2" time="53.09" timestamp="2023-02-24 11:31:56"><testcase name="Login exitoso en VivaAir"><failure message="User no valido" type="java.lang.AssertionError">User no valido</failure><system-err>User no valido
+Steps.LoginSteps.validationProfileViva(LoginSteps.java:47)
+StepDefinitions.LoginStepsDefinitions.validateProfile(LoginStepsDefinitions.java:39)
+✽.carga el profile con información personal, de contacto, historial, etc.(src/test/resources/Feature/login.feature:8)
+</system-err></testcase></testsuite>

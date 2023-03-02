@@ -151,7 +151,7 @@
             <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 21-02-2023 18:26</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 24-02-2023 11:31</span>
     <br style="clear:left"/>
 </div>
 
@@ -198,9 +198,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></a></span>
                             <span class="test-case-title">
-                                <span class="error-color">Login exitoso en VivaAir
+                                <span class="failing-color">Login exitoso en VivaAir
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -216,7 +216,7 @@
 
     <div class="story-title">
         <h3>Scenario:</h3>
-        <div class="scenario">Given como usuario frecuente de viva cree un nuevo user<br>And me dirijo al módulo "registrarse ahora"<br>And cuando cargue el formulario dinamico debere enviar un código de validación a mi email<br>And abro una nueva pestaña, busco mi email, espero que cargue la página, accedo al email de verificación, copio el código y me dirijo nuevamente a la página de registro de Viva<br>And ingreso &lt;password&gt;, &lt;password2&gt;, &lt;nonbre&gt;, &lt;apellido&gt;, &lt;documento&gt;, &lt;genero&gt;, &lt;AAAA-MM-DD&gt;, &lt;celular&gt;, &lt;pais&gt;, &lt;estado&gt;, &lt;ciudad&gt;, &lt;direccion&gt;<br>And verifico que los terminos y condicione esten check, de lo contrario, marco la casilla<br>When le doy clic a "crear" debo esperar mientras de procesa la informacion<br>Then me redirecciona al profile del user en Viva</div>
+        <div class="scenario">Given como usuario frecuente de viva cree un nuevo user<br>And me dirijo al módulo 'iniciar sesion'<br>And valido que cargue el home de inicio de sesion<br>When registro mi &lt;email&gt; &lt;password&gt; y le doy al boton de iniciar sesion<br>Then carga el profile con información personal, de contacto, historial, etc.</div>
     </div>
 
     <div id="beforetable"></div>
@@ -227,7 +227,7 @@
         <div class="table">
             <div class="row">
                 <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
-                    <span class="error-message error-message-title">No such element exception: Timed out after 2 seconds. Element not found</span>
+                    <span class="error-message error-message-title">Assertion error: User no valido</span>
                 </div>
                 <div class="col-sm-2">
                     <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
@@ -243,11 +243,11 @@
         <div class="collapse multi-collapse" id="stacktraceModal-overall">
             <div class="card">
                 <div class="card-header">
-                    <h4>org.openqa.selenium.NoSuchElementException </h4>
+                    <h4>java.lang.AssertionError </h4>
                 </div>
                 <div class="card-body">
                     <div>
-                        <pre>PageObject.LoginPageObject.isVisibleButtonGoogle(LoginPageObject.java:27)<br />Steps.LoginSteps.bottonLogginGoogle(LoginSteps.java:33)<br />StepDefinitions.LoginStepsDefinitions.logginGoogle(LoginStepsDefinitions.java:31)<br />✽.cuando cargue el formulario dinamico debere enviar un código de validación a mi email(src/test/resources/Feature/login.feature:6)<br /></pre>
+                        <pre>Steps.LoginSteps.validationProfileViva(LoginSteps.java:47)<br />StepDefinitions.LoginStepsDefinitions.validateProfile(LoginStepsDefinitions.java:39)<br />✽.carga el profile con información personal, de contacto, historial, etc.(src/test/resources/Feature/login.feature:8)<br /></pre>
                     </div>
 
                 </div>
@@ -257,17 +257,31 @@
 
 
                 <div class="panel-body">
-                    <a href="pagesource7927156627140265960.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                    <a href="pagesource4046942559377194695.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
                 </div>
             </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="6dfa9de19b4f7f98c80ae57a0619aa9322c052352b4448cddf00fac3ff59af45.png" title=" Example: {password=Testing123456., password2=Testing123456., nonbre=Javier, apellido=David, documento=1093785891, genero=M, AAAA-MM-DD=1998/03/11, celular=3165784528, pais=Colombia, estado=Antioquia, ciudad=Medellin, direccion=Calle 49BB#82-31}" width="1296"/>
-                <img src="6dfa9de19b4f7f98c80ae57a0619aa9322c052352b4448cddf00fac3ff59af45.png" title=" Given como usuario frecuente de viva cree un nuevo user" width="1296"/>
-                <img src="6dfa9de19b4f7f98c80ae57a0619aa9322c052352b4448cddf00fac3ff59af45.png" title=" And me dirijo al m&oacute;dulo &quot;registrarse ahora&quot;" width="1296"/>
-                <img src="ae64f95251b0174a4f20681c53a7b34beacd6218043d43195a98ed9f8ea5c24c.png" title=" And me dirijo al m&oacute;dulo &quot;registrarse ahora&quot; (completed)" width="1296"/>
-                <img src="ae64f95251b0174a4f20681c53a7b34beacd6218043d43195a98ed9f8ea5c24c.png" title=" And cuando cargue el formulario dinamico debere enviar un c&oacute;digo de validaci&oacute;n a mi email" width="1296"/>
-                <img src="137cb2adfaf8053fa9f9e4da02f7131c012382850003df5bc44122149eed2d8e.png" title=" And cuando cargue el formulario dinamico debere enviar un c&oacute;digo de validaci&oacute;n a mi email (completed): <span class='error-color'>ERROR</span>" width="1296"/>
+                <img src="fcded97288ac5a898964d1a393ab8b19798994180960e7cf7ac6098b0a57f21d.png" title=" Example: {email=jjimenezp@pibox.app, password=Testing123456.}" width="1024"/>
+                <img src="fcded97288ac5a898964d1a393ab8b19798994180960e7cf7ac6098b0a57f21d.png" title=" Given como usuario frecuente de viva cree un nuevo user" width="1024"/>
+                <img src="fcded97288ac5a898964d1a393ab8b19798994180960e7cf7ac6098b0a57f21d.png" title=" And me dirijo al m&oacute;dulo 'iniciar sesion'" width="1024"/>
+                <img src="9df119b615f0d03ad0970bddaa64ceca5c8ab22a0882e6a5709d48bf0cfdda24.png" title=" And me dirijo al m&oacute;dulo 'iniciar sesion' (completed)" width="1024"/>
+                <img src="9df119b615f0d03ad0970bddaa64ceca5c8ab22a0882e6a5709d48bf0cfdda24.png" title=" And valido que cargue el home de inicio de sesion" width="1024"/>
+                <img src="e59d5ce0acb6e22e35f8eb02e53173efa16786cdaa89cb76eaeff3cd04a49a44.png" title=" And valido que cargue el home de inicio de sesion (completed)" width="1024"/>
+                <img src="e59d5ce0acb6e22e35f8eb02e53173efa16786cdaa89cb76eaeff3cd04a49a44.png" title=" When registro mi jjimenezp@pibox.app Testing123456. y le doy al boton de iniciar sesion" width="1024"/>
+                <img src="eec85bb53e93e6e6eaa29f321cc866f2af2ee32d65b58cc46a5c128ad75a173f.png" title=" When registro mi jjimenezp@pibox.app Testing123456. y le doy al boton de iniciar sesion (completed)" width="1024"/>
+                <img src="eec85bb53e93e6e6eaa29f321cc866f2af2ee32d65b58cc46a5c128ad75a173f.png" title=" Then carga el profile con informaci&oacute;n personal, de contacto, historial, etc." width="1024"/>
+                <img src="411865cdcfd83f3cbeffd90509f67d54d3c54ac6e665f2b9134857e8d5c00074.png" title=" Then carga el profile con informaci&oacute;n personal, de contacto, historial, etc. (completed)" width="1024"/>
+                <img src="3c7e8f364522d72a8a0e4ff35b63907589dea7971d6c213f2f5311d0e8bfe3a9.png" title=" Example: {email=javierjimenezdp10@gmail.com, password=123456}" width="1024"/>
+                <img src="3c7e8f364522d72a8a0e4ff35b63907589dea7971d6c213f2f5311d0e8bfe3a9.png" title=" Given como usuario frecuente de viva cree un nuevo user" width="1024"/>
+                <img src="3c7e8f364522d72a8a0e4ff35b63907589dea7971d6c213f2f5311d0e8bfe3a9.png" title=" And me dirijo al m&oacute;dulo 'iniciar sesion'" width="1024"/>
+                <img src="9df119b615f0d03ad0970bddaa64ceca5c8ab22a0882e6a5709d48bf0cfdda24.png" title=" And me dirijo al m&oacute;dulo 'iniciar sesion' (completed)" width="1024"/>
+                <img src="9df119b615f0d03ad0970bddaa64ceca5c8ab22a0882e6a5709d48bf0cfdda24.png" title=" And valido que cargue el home de inicio de sesion" width="1024"/>
+                <img src="e59d5ce0acb6e22e35f8eb02e53173efa16786cdaa89cb76eaeff3cd04a49a44.png" title=" And valido que cargue el home de inicio de sesion (completed)" width="1024"/>
+                <img src="e59d5ce0acb6e22e35f8eb02e53173efa16786cdaa89cb76eaeff3cd04a49a44.png" title=" When registro mi javierjimenezdp10@gmail.com 123456 y le doy al boton de iniciar sesion" width="1024"/>
+                <img src="baf833b1608bd72e4680d392922c666965942f7ae806303b8eee2214f6a43430.png" title=" When registro mi javierjimenezdp10@gmail.com 123456 y le doy al boton de iniciar sesion (completed)" width="1024"/>
+                <img src="baf833b1608bd72e4680d392922c666965942f7ae806303b8eee2214f6a43430.png" title=" Then carga el profile con informaci&oacute;n personal, de contacto, historial, etc." width="1024"/>
+                <img src="baf833b1608bd72e4680d392922c666965942f7ae806303b8eee2214f6a43430.png" title=" Then carga el profile con informaci&oacute;n personal, de contacto, historial, etc. (completed): <span class='failing-color'>FAILURE</span>" width="1024"/>
             </div>
         </div>
 

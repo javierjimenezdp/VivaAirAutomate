@@ -21,18 +21,22 @@ public class LoginStepsDefinitions {
         loginSteps.verification_pageViva();
     }
 
-    @And("^me dirijo al módulo \"registrarse ahora\"$")
+    @And("^me dirijo al módulo 'iniciar sesion'$")
     public void loginBotton() {
         loginSteps.bottonLoggin();
     }
 
-    @And("^cuando cargue el formulario dinamico debere enviar un código de validación a mi email$")
-    public void logginGoogle() {
-        loginSteps.bottonLogginGoogle();
+    @And("^valido que cargue el home de inicio de sesion$")
+    public void validateHome() {
+        loginSteps.validationHomeViva();
     }
-    @And("^abro una nueva pestaña, busco mi email, espero que cargue la página, accedo al email de verificación, copio el código y me dirijo nuevamente a la página de registro de Viva$")
-    public void selectUser() {
-        loginSteps.bottonUserGoogle();
+    @When("^registro mi (.*) (.*) y le doy al boton de iniciar sesion$")
+    public void setUser(String email, String password) {
+        loginSteps.setUserProgile(email, password);
+    }
+    @Then("^carga el profile con información personal, de contacto, historial, etc.$")
+    public void validateProfile() {
+        loginSteps.validationProfileViva();
     }
 }
 

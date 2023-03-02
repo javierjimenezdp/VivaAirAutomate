@@ -1,9 +1,9 @@
 package Steps;
 
 import PageObject.LoginPageObject;
-import PageObject.VivaPageObject;
+import Reports.Reports;
 import StepDefinitions.Hooks;
-import groovy.util.logging.Log;
+import org.junit.Assert;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -28,12 +28,24 @@ public class LoginSteps {
     public void bottonLoggin() {
         loginPageObject.clicBottonLoggin();
     }
-    public void bottonLogginGoogle() {
-        loginPageObject.logginGoogleClic();
-        while (loginPageObject.isVisibleButtonGoogle()){
-            loginPageObject.logginGoogleClic();
-        }
+
+    public void validationHomeViva() {
+        loginPageObject.validationHome();
     }
-    public void bottonUserGoogle() {
+
+    public void setUserProgile(String email, String password) {
+        loginPageObject.sendKeysEmail(email);
+        Reports.reports("INFO","Se ingresó el email",Reports.takeSnapShot(Hooks.getDriver()));
+        loginPageObject.sendKeysPassword(password);
+        Reports.reports("INFO","Se ingresó el password",Reports.takeSnapShot(Hooks.getDriver()));
+        loginPageObject.clicLoggin();
+    }
+
+    public void validationProfileViva() {
+        if (!loginPageObject.isVisibleProfile()){
+            Reports.reports("FAIL","User no válido",Reports.takeSnapShot(Hooks.getDriver()));
+            Assert.fail("User no valido");
+        }
+        Reports.reports("PASS","Se dio valida profile",Reports.takeSnapShot(Hooks.getDriver()));
     }
 }
